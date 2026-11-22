@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CADENZA — Duel of the Conductors</title>
+<link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="brand">CADENZA <span class="brand-sub">— Duel of the Conductors</span></div>
+    <div class="top-right"><span id="round-label">Round 1</span>
+      <button id="restart-button" title="Restart the duel (R)">↻ Restart</button></div>
+  </header>
+
+  <section class="rival-zone">
+    <div id="rival-side"></div>
+    <div id="rival-hand" class="rival-hand" aria-label="The rival's hand"></div>
+    <div id="intent-slot"></div>
+  </section>
+
+  <section class="stage">
+    <div id="played-slot" class="played-slot"></div>
+    <div id="log" class="log" aria-live="polite"></div>
+  </section>
+
+  <section class="player-zone">
+    <div id="player-side"></div>
+    <div id="player-hand" class="player-hand" aria-label="Your hand"></div>
+    <button id="end-turn" class="end-turn">End Turn&nbsp; <kbd>E</kbd></button>
+  </section>
+
+  <div id="overlay" class="overlay-host" hidden></div>
+  <p id="status" class="sr-only" role="status" aria-live="polite"></p>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
